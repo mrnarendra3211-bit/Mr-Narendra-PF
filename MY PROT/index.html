@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Narendra Prajapat // BCA AIML Student & Web Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Narendra Prajapat — BCA AIML Student at UEM Jaipur, Web Developer, AI/ML Enthusiast, and Creator of SarkarX platform.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Main Stylesheet -->
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Dynamic Background Canvas & Glow Orbs -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="ambient-glows">
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="glow-orb glow-orb-3"></div>
+  </div>
+
+  <!-- Sticky Glassmorphism Navigation Bar -->
+  <nav class="navbar" id="main-navbar">
+    <a href="#hero" class="nav-brand">
+      <div class="brand-monogram">NP</div>
+      <div class="brand-text">
+        <span class="brand-name">Narendra Prajapat</span>
+        <span class="brand-subtitle">BCA AIML | Web Developer</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#hero" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#certificates" class="nav-link">Certificates</a></li>
+      <li><a href="#achievements" class="nav-link">Achievements</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="https://github.com/mrnarendra3211-bit" target="_blank" rel="noopener" class="nav-social-icon" title="GitHub">
+        <i data-lucide="github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/mr-narendra-prajapat-900340381/" target="_blank" rel="noopener" class="nav-social-icon" title="LinkedIn">
+        <i data-lucide="linkedin"></i>
+      </a>
+      <a href="#contact" class="btn btn-primary btn-sm nav-cta">
+        <span>Let's Talk</span>
+        <i data-lucide="arrow-up-right"></i>
+      </a>
+      <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle menu">
+        <i data-lucide="menu" id="menu-icon"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-monogram">NP</div>
+      <button class="drawer-close-btn" id="drawer-close">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#hero" class="mobile-link">Home</a></li>
+      <li><a href="#about" class="mobile-link">About Me</a></li>
+      <li><a href="#skills" class="mobile-link">Skills & Stack</a></li>
+      <li><a href="#projects" class="mobile-link">Featured Project</a></li>
+      <li><a href="#certificates" class="mobile-link">Certificates</a></li>
+      <li><a href="#achievements" class="mobile-link">Achievements</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <a href="#contact" class="btn btn-primary w-full">Let's Talk</a>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main>
+
+    <!-- 1. HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+        
+        <!-- Left Side: Bio & CTAs -->
+        <div class="hero-content fade-in">
+          <div class="hero-badge">
+            <span class="pulsing-dot"></span>
+            <span>Hello, I'm Narendra 👋</span>
+          </div>
+
+          <h1 class="hero-title">
+            Building Digital Experiences <br>
+            with <span class="gradient-text">Code & Creativity.</span>
+          </h1>
+
+          <div class="hero-tags">
+            <span class="tag-chip cyan-chip"><i data-lucide="code-2"></i> Web Developer</span>
+            <span class="tag-chip purple-chip"><i data-lucide="brain"></i> AI/ML Enthusiast</span>
+          </div>
+
+          <p class="hero-description">
+            I'm a BCA AIML student at UEM Jaipur passionate about programming, web development and building technology-driven solutions for real-world impact.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              <span>View My Work</span>
+              <i data-lucide="arrow-down-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Contact Me</span>
+              <i data-lucide="mail"></i>
+            </a>
+            <button class="btn btn-glass" id="download-resume-btn">
+              <span>Download Resume</span>
+              <i data-lucide="download"></i>
+            </button>
+          </div>
+
+          <!-- Social Links Bar -->
+          <div class="hero-social-bar">
+            <span class="social-label">Connect with me:</span>
+            <div class="social-icons-group">
+              <a href="https://github.com/mrnarendra3211-bit" target="_blank" rel="noopener" class="social-bubble" title="GitHub">
+                <i data-lucide="github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/mr-narendra-prajapat-900340381/" target="_blank" rel="noopener" class="social-bubble" title="LinkedIn">
+                <i data-lucide="linkedin"></i>
+              </a>
+              <a href="mailto:mrnarendra3211@gmail.com" class="social-bubble" title="Email">
+                <i data-lucide="mail"></i>
+              </a>
+              <a href="tel:+919413985821" class="social-bubble" title="Phone">
+                <i data-lucide="phone"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Framed Portrait with Glowing Aura & Floating Tech Pills -->
+        <div class="hero-visual fade-in">
+          <div class="portrait-frame-container">
+            <div class="portrait-glow-ring"></div>
+            
+            <div class="portrait-glass-card">
+              <!-- High-Tech Developer Avatar Representation -->
+              <div class="developer-avatar-wrapper">
+                <div class="avatar-bg-grid"></div>
+                <div class="avatar-photo-mock">
+                    <img src="nanu.jpg.jpg" alt="Narendra Prajapat Portrait" class="profile-image">
+                  <div class="avatar-initials">NP</div>
+                  <div class="avatar-role-tag">BCA AIML // UEM Jaipur</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Tech Pills -->
+            <div class="floating-pill pill-cplusplus">
+              <span class="pill-icon">C++</span>
+              <span class="pill-text">Programmer</span>
+            </div>
+
+            <div class="floating-pill pill-python">
+              <span class="pill-icon">🐍</span>
+              <span class="pill-text">Python</span>
+            </div>
+
+            <div class="floating-pill pill-js">
+              <span class="pill-icon">JS</span>
+              <span class="pill-text">JavaScript</span>
+            </div>
+
+            <div class="floating-pill pill-aiml">
+              <span class="pill-icon">🧠</span>
+              <span class="pill-text">AI / ML</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. ABOUT ME SECTION -->
+    <section id="about" class="about-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">// ABOUT ME</span>
+          <h2 class="section-title">Turning Ideas Into Impactful Solutions</h2>
+          <p class="section-subtitle">
+            Passionate about technology. Focused on building useful digital experiences.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          
+          <!-- Column 1: Detailed Bio -->
+          <div class="about-text-card glass-card fade-in">
+            <h3 class="about-card-title">Driven Developer & AI/ML Student</h3>
+            <p>
+              I am Narendra Prajapat, currently pursuing my Bachelor of Computer Applications (BCA) with a specialization in <strong>Artificial Intelligence & Machine Learning</strong> at the University of Engineering & Management (UEM), Jaipur (3rd Semester).
+            </p>
+            <p>
+              My journey in tech combines rigorous programming fundamentals in C, C++, and Python with modern full-stack web development techniques and intelligent AI model integration. I love taking complex, manual processes and building sleek, automated digital software solutions.
+            </p>
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <i data-lucide="check-circle-2"></i>
+                <span>Clean, maintainable codebase architecture</span>
+              </div>
+              <div class="highlight-item">
+                <i data-lucide="check-circle-2"></i>
+                <span>User-centric responsive UI/UX craftsmanship</span>
+              </div>
+              <div class="highlight-item">
+                <i data-lucide="check-circle-2"></i>
+                <span>AI-powered automation & digital service integration</span>
+              </div>
+            </div>
+            
+            <div class="about-cta-row">
+              <a href="#contact" class="btn btn-primary">
+                <span>Let's Collaborate</span>
+                <i data-lucide="arrow-right"></i>
+              </a>
+              <button class="btn btn-secondary" onclick="triggerResumeDownload()">
+                <i data-lucide="download"></i> Download Resume
+              </button>
+            </div>
+          </div>
+
+          <!-- Column 2: Information Stat Cards -->
+          <div class="about-stats-grid fade-in">
+            
+            <div class="stat-card glass-card">
+              <div class="stat-icon cyan-icon">
+                <i data-lucide="graduation-cap"></i>
+              </div>
+              <div class="stat-number">3rd Sem</div>
+              <div class="stat-label">BCA AIML Degree</div>
+              <div class="stat-sub">UEM Jaipur</div>
+            </div>
+
+            <div class="stat-card glass-card">
+              <div class="stat-icon purple-icon">
+                <i data-lucide="building-2"></i>
+              </div>
+              <div class="stat-number">UEM</div>
+              <div class="stat-label">University Campus</div>
+              <div class="stat-sub">Jaipur, Rajasthan</div>
+            </div>
+
+            <div class="stat-card glass-card">
+              <div class="stat-icon blue-icon">
+                <i data-lucide="code"></i>
+              </div>
+              <div class="stat-number">10+</div>
+              <div class="stat-label">Tech Competencies</div>
+              <div class="stat-sub">Full Stack & AI</div>
+            </div>
+
+            <div class="stat-card glass-card">
+              <div class="stat-icon emerald-icon">
+                <i data-lucide="lightbulb"></i>
+              </div>
+              <div class="stat-number">SarkarX</div>
+              <div class="stat-label">Flagship Project</div>
+              <div class="stat-sub">AI Government Platform</div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. SKILLS & TECHNOLOGIES (Bento Grid Layout) -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">// COMPETENCIES & STACK</span>
+          <h2 class="section-title">Skills & Technologies</h2>
+          <p class="section-subtitle">
+            Hover over any bento card to inspect tech focus areas and skill breakdown.
+          </p>
+        </div>
+
+        <!-- Bento Grid Container -->
+        <div class="bento-skills-grid">
+          
+          <!-- Bento Tile 1: PROGRAMMING (C, C++, Python) -->
+          <div class="bento-card glass-card bento-span-2 fade-in" data-tilt>
+            <div class="bento-header">
+              <div class="bento-icon cyan-glow-icon">
+                <i data-lucide="terminal"></i>
+              </div>
+              <span class="bento-category">PROGRAMMING</span>
+            </div>
+            <h3 class="bento-title">Core Software Development</h3>
+            <p class="bento-desc">
+              Strong logic building, object-oriented programming, data structures, and algorithmic problem-solving in high-level and system programming languages.
+            </p>
+
+            <div class="skills-chips-group">
+              <div class="skill-pill">
+                <span class="skill-name">C</span>
+                <span class="skill-level">Procedural & Logic</span>
+              </div>
+              <div class="skill-pill active-pill">
+                <span class="skill-name">C++</span>
+                <span class="skill-level">OOP & DSA</span>
+              </div>
+              <div class="skill-pill active-pill">
+                <span class="skill-name">Python</span>
+                <span class="skill-level">AI/ML & Scripting</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento Tile 2: WEB DEVELOPMENT (HTML, CSS, JS) -->
+          <div class="bento-card glass-card bento-span-2 fade-in" data-tilt>
+            <div class="bento-header">
+              <div class="bento-icon purple-glow-icon">
+                <i data-lucide="layout"></i>
+              </div>
+              <span class="bento-category">WEB DEVELOPMENT</span>
+            </div>
+            <h3 class="bento-title">Frontend & Web Systems</h3>
+            <p class="bento-desc">
+              Building responsive, glassmorphic UI designs with accessible semantic markup, modern CSS grid/flexbox layouts, and dynamic ES6+ JavaScript.
+            </p>
+
+            <div class="skills-chips-group">
+              <div class="skill-pill">
+                <span class="skill-name">HTML5</span>
+                <span class="skill-level">Semantic Structure</span>
+              </div>
+              <div class="skill-pill">
+                <span class="skill-name">CSS3</span>
+                <span class="skill-level">Modern Glassmorphism</span>
+              </div>
+              <div class="skill-pill active-pill">
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-level">ES6+ Async Logic</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento Tile 3: DATABASE (MySQL) -->
+          <div class="bento-card glass-card bento-span-1 fade-in" data-tilt>
+            <div class="bento-header">
+              <div class="bento-icon blue-glow-icon">
+                <i data-lucide="database"></i>
+              </div>
+              <span class="bento-category">DATABASE</span>
+            </div>
+            <h3 class="bento-title">MySQL Systems</h3>
+            <p class="bento-desc">
+              Relational database design, SQL querying, schema optimization, and table indexing for persistent data models.
+            </p>
+            <div class="skills-chips-group">
+              <div class="skill-pill active-pill">
+                <span class="skill-name">MySQL</span>
+                <span class="skill-level">Relational SQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento Tile 4: TOOLS & TECHNOLOGY (Git, GitHub, AI/ML) -->
+          <div class="bento-card glass-card bento-span-3 fade-in" data-tilt>
+            <div class="bento-header">
+              <div class="bento-icon emerald-glow-icon">
+                <i data-lucide="cpu"></i>
+              </div>
+              <span class="bento-category">TOOLS & TECHNOLOGY</span>
+            </div>
+            <h3 class="bento-title">AI / Machine Learning & Version Control</h3>
+            <p class="bento-desc">
+              Utilizing Git & GitHub workflows for collaborative development alongside applying foundational Machine Learning algorithms and AI model integration.
+            </p>
+
+            <div class="skills-chips-group">
+              <div class="skill-pill">
+                <span class="skill-name">Git</span>
+                <span class="skill-level">Version Control</span>
+              </div>
+              <div class="skill-pill">
+                <span class="skill-name">GitHub</span>
+                <span class="skill-level">Repositories & CI</span>
+              </div>
+              <div class="skill-pill active-pill">
+                <span class="skill-name">AI / ML Core</span>
+                <span class="skill-level">Model Training & Logic</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. FEATURED PROJECT SECTION (SarkarX) -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">// FLAGSHIP CASE STUDY</span>
+          <h2 class="section-title">Featured Project</h2>
+          <p class="section-subtitle">
+            Deep dive into SarkarX — an AI-Powered Digital Government Services Platform.
+          </p>
+        </div>
+
+        <!-- SarkarX Master Showcase Card -->
+        <div class="sarkarx-case-study glass-card fade-in">
+          
+          <div class="sarkarx-grid">
+            
+            <!-- Left Column: High-Tech Project Preview Screenshot Frame -->
+            <div class="sarkarx-preview-col">
+              <div class="preview-browser-frame">
+                <div class="browser-header-bar">
+                  <div class="browser-dots">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                  </div>
+                  <div class="browser-address-bar">
+                    <i data-lucide="lock"></i>
+                    <span>https://sarkarx.gov.in</span>
+                  </div>
+                </div>
+
+                <div class="browser-content-viewport" id="main-sarkarx-viewport">
+                  <!-- Simulated High-Tech SarkarX Platform UI -->
+                  <div class="sarkarx-ui-mock">
+                    <div class="mock-nav">
+                      <div class="mock-logo">SarkarX AI</div>
+                      <div class="mock-badge">Digital India 2.0</div>
+                    </div>
+                    <div class="mock-hero">
+                      <h4 class="mock-heading">AI-Powered Digital Government Services</h4>
+                      <p class="mock-sub">Unified access to Aadhaar, PAN, Passport, FIR & Gas Booking.</p>
+                      <div class="mock-btn-row">
+                        <span class="mock-pill-btn">Access Citizen Portal</span>
+                        <span class="mock-pill-outline">Ask AI Assistant</span>
+                      </div>
+                    </div>
+                    <div class="mock-cards-grid">
+                      <div class="mock-card">
+                        <i data-lucide="fingerprint"></i>
+                        <span>Aadhaar Updates</span>
+                      </div>
+                      <div class="mock-card">
+                        <i data-lucide="credit-card"></i>
+                        <span>PAN Services</span>
+                      </div>
+                      <div class="mock-card">
+                        <i data-lucide="file-text"></i>
+                        <span>e-Passport</span>
+                      </div>
+                      <div class="mock-card">
+                        <i data-lucide="shield-alert"></i>
+                        <span>Online FIR</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Case Study Details -->
+            <div class="sarkarx-info-col">
+              
+              <div class="sarkarx-badge">
+                <i data-lucide="sparkles"></i> AI Platform
+              </div>
+
+              <h3 class="sarkarx-title">SarkarX</h3>
+              <div class="sarkarx-subtitle">AI-Powered Digital Government Services Platform</div>
+
+              <p class="sarkarx-overview">
+                SarkarX is a modern, unified digital government services platform designed to empower citizens by centralizing access to essential public services—including Aadhaar updates, PAN card generation, driving licenses, e-Passport applications, FIR filing, and gas booking.
+              </p>
+
+              <div class="info-block">
+                <span class="block-label">MY ROLE:</span>
+                <span class="block-val">Lead UI/UX Designer & Full-Stack Developer</span>
+              </div>
+
+              <!-- Feature Badges -->
+              <div class="info-block">
+                <span class="block-label">KEY FEATURES:</span>
+                <div class="feature-tags-grid">
+                  <span class="ft-tag"><i data-lucide="check"></i> Aadhaar Services</span>
+                  <span class="ft-tag"><i data-lucide="check"></i> PAN Card Portal</span>
+                  <span class="ft-tag"><i data-lucide="check"></i> Driving License</span>
+                  <span class="ft-tag"><i data-lucide="check"></i> Passport Services</span>
+                  <span class="ft-tag"><i data-lucide="check"></i> FIR Registration</span>
+                  <span class="ft-tag"><i data-lucide="check"></i> Gas Booking</span>
+                </div>
+              </div>
+
+              <!-- Technology Stack -->
+              <div class="info-block">
+                <span class="block-label">TECH STACK:</span>
+                <div class="tech-pills-row">
+                  <span class="tp-pill">HTML5</span>
+                  <span class="tp-pill">CSS3</span>
+                  <span class="tp-pill">JavaScript</span>
+                  <span class="tp-pill">Python</span>
+                  <span class="tp-pill">MySQL</span>
+                  <span class="tp-pill">AI/ML Logic</span>
+                </div>
+              </div>
+
+              <!-- Action CTAs -->
+              <div class="sarkarx-actions">
+                <a href="https://github.com/mrnarendra3211-bit" target="_blank" rel="noopener" class="btn btn-primary">
+                  <i data-lucide="external-link"></i>
+                  <span>View Live Project</span>
+                </a>
+                <a href="https://github.com/mrnarendra3211-bit" target="_blank" rel="noopener" class="btn btn-secondary">
+                  <i data-lucide="github"></i>
+                  <span>View GitHub</span>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Interactive Screenshot Gallery Thumbnails -->
+          <div class="sarkarx-gallery-section">
+            <h4 class="gallery-title">Interactive Interface Gallery (Click to Inspect Fullscreen)</h4>
+            <div class="gallery-thumbnails-grid">
+              
+              <div class="thumb-card" data-gallery="1" onclick="openLightbox('SarkarX Citizen Dashboard', 'Central dashboard with quick links to all 6 major government services and real-time status tracker.')">
+                <div class="thumb-header">Citizen Dashboard</div>
+                <div class="thumb-preview preview-dash"></div>
+              </div>
+
+              <div class="thumb-card" data-gallery="2" onclick="openLightbox('Aadhaar & PAN Verification Portal', 'Automated document OCR and AI verification workflow for fast credential processing.')">
+                <div class="thumb-header">Aadhaar & PAN Verification</div>
+                <div class="thumb-preview preview-verify"></div>
+              </div>
+
+              <div class="thumb-card" data-gallery="3" onclick="openLightbox('SarkarAI Conversational Assistant', 'Multilingual AI chatbot assisting citizens in filing applications step-by-step.')">
+                <div class="thumb-header">SarkarAI Chatbot</div>
+                <div class="thumb-preview preview-bot"></div>
+              </div>
+
+              <div class="thumb-card" data-gallery="4" onclick="openLightbox('Application Status Tracker', 'Real-time telemetry tracking application progress across regional authorities.')">
+                <div class="thumb-header">Live Status Tracker</div>
+                <div class="thumb-preview preview-status"></div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. CERTIFICATES SECTION -->
+    <section id="certificates" class="certificates-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">// CREDENTIALS & ACCOMPLISHMENTS</span>
+          <h2 class="section-title">Certificates & Achievements</h2>
+          <p class="section-subtitle">
+            Click any certificate card to view high-resolution credential details.
+          </p>
+        </div>
+
+        <div class="certificates-grid">
+          
+          <!-- Card 1: Wadhwani Foundation -->
+          <div class="cert-card glass-card fade-in" onclick="openLightbox('Wadhwani Foundation — Ignite India Program', 'Completed 42 hours of structured training in ideation, business modeling, financial planning, and venture creation (2025).')">
+            <div class="cert-image-container">
+              <div class="cert-badge-tag">2025</div>
+              <div class="cert-mock-graphic cert-wadhwani">
+                <div class="cert-stamp">WF</div>
+                <div class="cert-graphic-title">IGNITE INDIA</div>
+              </div>
+            </div>
+            <div class="cert-info">
+              <h3 class="cert-title">Ignite India Program</h3>
+              <div class="cert-org"><i data-lucide="award"></i> Wadhwani Foundation</div>
+              <div class="cert-year">Issued: 2025</div>
+            </div>
+          </div>
+
+          <!-- Card 2: Pixel Ki Paheli 2.0 -->
+          <div class="cert-card glass-card fade-in" onclick="openLightbox('UEM Jaipur (Hacksec) — Pixel Ki Paheli 2.0', 'Coordinated and participated in the technical event organized by Hacksec club during Techutopia 2025 at UEM Jaipur.')">
+            <div class="cert-image-container">
+              <div class="cert-badge-tag">2025</div>
+              <div class="cert-mock-graphic cert-pixel">
+                <div class="cert-stamp">UEM</div>
+                <div class="cert-graphic-title">PIXEL KI PAHELI</div>
+              </div>
+            </div>
+            <div class="cert-info">
+              <h3 class="cert-title">Pixel Ki Paheli 2.0</h3>
+              <div class="cert-org"><i data-lucide="award"></i> UEM Jaipur (Hacksec)</div>
+              <div class="cert-year">Issued: 2025</div>
+            </div>
+          </div>
+
+          <!-- Card 3: AI Impact Summit -->
+          <div class="cert-card glass-card fade-in" onclick="openLightbox('AI Impact Summit — AI in Action', 'Participated in expert session on Building Intelligent Agents & Generative Applications at the AI Impact Summit (2026).')">
+            <div class="cert-image-container">
+              <div class="cert-badge-tag">2026</div>
+              <div class="cert-mock-graphic cert-ai">
+                <div class="cert-stamp">AI</div>
+                <div class="cert-graphic-title">AI IN ACTION</div>
+              </div>
+            </div>
+            <div class="cert-info">
+              <h3 class="cert-title">AI in Action Summit</h3>
+              <div class="cert-org"><i data-lucide="award"></i> AI Impact Summit</div>
+              <div class="cert-year">Issued: 2026</div>
+            </div>
+          </div>
+
+          <!-- Card 4: Pragati Ideation 2025 -->
+          <div class="cert-card glass-card fade-in" onclick="openLightbox('IEEE UEMJ Student Chapter — Pragati Ideation 2025', 'Participated in Pragati Ideation 2025 organized by IEEE UEMJ Student Chapter for tech solution presentation.')">
+            <div class="cert-image-container">
+              <div class="cert-badge-tag">2025</div>
+              <div class="cert-mock-graphic cert-pragati">
+                <div class="cert-stamp">IEEE</div>
+                <div class="cert-graphic-title">PRAGATI IDEATION</div>
+              </div>
+            </div>
+            <div class="cert-info">
+              <h3 class="cert-title">Pragati Ideation 2025</h3>
+              <div class="cert-org"><i data-lucide="award"></i> IEEE UEMJ Student Chapter</div>
+              <div class="cert-year">Issued: 2025</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. ACHIEVEMENTS TIMELINE SECTION -->
+    <section id="achievements" class="achievements-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">// MILESTONES & JOURNEY</span>
+          <h2 class="section-title">Achievements Timeline</h2>
+          <p class="section-subtitle">
+            Key tech competitions, innovation summits, and professional growth events.
+          </p>
+        </div>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-line"></div>
+
+          <!-- Node 1: Ignite India -->
+          <div class="timeline-item left-item fade-in">
+            <div class="timeline-dot cyan-dot"></div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-year">2025</span>
+              <h3 class="timeline-title">Ignite India Program</h3>
+              <span class="timeline-org">Wadhwani Foundation</span>
+              <p class="timeline-desc">
+                Completed 42 hours of rigorous training in ideation, business modeling, financial planning, and technology venture validation.
+              </p>
+            </div>
+          </div>
+
+          <!-- Node 2: Pixel Ki Paheli -->
+          <div class="timeline-item right-item fade-in">
+            <div class="timeline-dot purple-dot"></div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-year">2025</span>
+              <h3 class="timeline-title">Pixel Ki Paheli 2.0</h3>
+              <span class="timeline-org">UEM Jaipur (Hacksec)</span>
+              <p class="timeline-desc">
+                Successfully coordinated and participated in the technical problem-solving event organized by Hacksec club during Techutopia 2025.
+              </p>
+            </div>
+          </div>
+
+          <!-- Node 3: Pragati Ideation -->
+          <div class="timeline-item left-item fade-in">
+            <div class="timeline-dot blue-dot"></div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-year">2025</span>
+              <h3 class="timeline-title">Pragati Ideation 2025</h3>
+              <span class="timeline-org">IEEE UEMJ Student Chapter</span>
+              <p class="timeline-desc">
+                Presented tech product prototype and digital innovation architecture at Pragati Ideation event.
+              </p>
+            </div>
+          </div>
+
+          <!-- Node 4: AI in Action Summit -->
+          <div class="timeline-item right-item fade-in">
+            <div class="timeline-dot emerald-dot"></div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-year">2026</span>
+              <h3 class="timeline-title">AI in Action — AI Impact Summit</h3>
+              <span class="timeline-org">AI Impact Summit</span>
+              <p class="timeline-desc">
+                Participated in master sessions on Building Intelligent Agents, Generative Applications, and AI Microservices.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. EDUCATION SECTION -->
+    <section id="education" class="education-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">// ACADEMIC FOUNDATION</span>
+          <h2 class="section-title">Education</h2>
+        </div>
+
+        <div class="education-card glass-card fade-in">
+          <div class="edu-header">
+            <div class="edu-icon">
+              <i data-lucide="graduation-cap"></i>
+            </div>
+            <div class="edu-title-group">
+              <h3 class="edu-university">University of Engineering & Management (UEM), Jaipur</h3>
+              <div class="edu-degree">Bachelor of Computer Applications (BCA) — Artificial Intelligence & Machine Learning</div>
+            </div>
+            <div class="edu-status-pill">Current: 3rd Semester</div>
+          </div>
+
+          <div class="edu-body">
+            <p>
+              Undergraduate program specializing in AI algorithms, Machine Learning models, Web Engineering, Data Structures & Algorithms, Database Management Systems, and Object-Oriented Programming.
+            </p>
+            <div class="edu-topics-grid">
+              <span class="topic-chip"><i data-lucide="code"></i> C & C++ Programming</span>
+              <span class="topic-chip"><i data-lucide="brain"></i> Python & AI/ML Core</span>
+              <span class="topic-chip"><i data-lucide="globe"></i> Web Engineering</span>
+              <span class="topic-chip"><i data-lucide="database"></i> MySQL Systems</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 8. CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        
+        <div class="contact-grid">
+          
+          <!-- Left Info Column -->
+          <div class="contact-info-col fade-in">
+            <span class="section-tag">// LET'S CONNECT</span>
+            <h2 class="contact-heading">Let's Build Something Together.</h2>
+            <p class="contact-subtitle">
+              Have a project idea, collaboration opportunity or simply want to connect? Let's talk.
+            </p>
+
+            <div class="contact-details-list">
+              
+              <a href="mailto:mrnarendra3211@gmail.com" class="contact-item-card glass-card">
+                <div class="c-icon cyan-icon"><i data-lucide="mail"></i></div>
+                <div class="c-text">
+                  <span class="c-label">Email Me</span>
+                  <span class="c-val">mrnarendra3211@gmail.com</span>
+                </div>
+              </a>
+
+              <a href="tel:+919413985821" class="contact-item-card glass-card">
+                <div class="c-icon purple-icon"><i data-lucide="phone"></i></div>
+                <div class="c-text">
+                  <span class="c-label">Call / WhatsApp</span>
+                  <span class="c-val">+91 9413985821</span>
+                </div>
+              </a>
+
+              <a href="https://github.com/mrnarendra3211-bit" target="_blank" rel="noopener" class="contact-item-card glass-card">
+                <div class="c-icon blue-icon"><i data-lucide="github"></i></div>
+                <div class="c-text">
+                  <span class="c-label">GitHub Profile</span>
+                  <span class="c-val">github.com/mrnarendra3211-bit</span>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/mr-narendra-prajapat-900340381/" target="_blank" rel="noopener" class="contact-item-card glass-card">
+                <div class="c-icon emerald-icon"><i data-lucide="linkedin"></i></div>
+                <div class="c-text">
+                  <span class="c-label">LinkedIn Profile</span>
+                  <span class="c-val">Mr. Narendra Prajapat</span>
+                </div>
+              </a>
+
+            </div>
+          </div>
+
+          <!-- Right Form Column -->
+          <div class="contact-form-col fade-in">
+            <div class="contact-form-card glass-card">
+              <h3 class="form-title">Send a Message</h3>
+              <form id="contact-form" onsubmit="handleFormSubmit(event)">
+                
+                <div class="form-group">
+                  <label for="form-name" class="form-label">Your Name</label>
+                  <input type="text" id="form-name" class="form-input" placeholder="e.g. Rahul Sharma" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="form-email" class="form-label">Email Address</label>
+                  <input type="email" id="form-email" class="form-input" placeholder="e.g. rahul@example.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="form-message" class="form-label">Message</label>
+                  <textarea id="form-message" class="form-textarea" rows="5" placeholder="Hi Narendra, I'd like to collaborate on a project..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-full" id="submit-btn">
+                  <span>Send Message</span>
+                  <i data-lucide="send"></i>
+                </button>
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="brand-monogram">NP</div>
+        <div>
+          <div class="footer-name">Narendra Prajapat</div>
+          <div class="footer-title">BCA AIML Student | Web Developer</div>
+        </div>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://github.com/mrnarendra3211-bit" target="_blank" rel="noopener"><i data-lucide="github"></i></a>
+        <a href="https://www.linkedin.com/in/mr-narendra-prajapat-900340381/" target="_blank" rel="noopener"><i data-lucide="linkedin"></i></a>
+        <a href="mailto:mrnarendra3211@gmail.com"><i data-lucide="mail"></i></a>
+      </div>
+
+      <div class="footer-copyright">
+        © 2026 Narendra Prajapat. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL FOR CERTIFICATES & GALLERY -->
+  <div class="lightbox-overlay" id="lightbox-modal">
+    <div class="lightbox-content glass-card">
+      <button class="lightbox-close" onclick="closeLightbox()">
+        <i data-lucide="x"></i>
+      </button>
+      <h3 class="lightbox-title" id="lb-title">Credential / Preview</h3>
+      <p class="lightbox-desc" id="lb-desc">Detailed explanation of the preview card.</p>
+      <div class="lightbox-visual" id="lb-visual">
+        <!-- Dynamic Visual Frame -->
+      </div>
+      <button class="btn btn-primary" onclick="closeLightbox()" style="margin-top: 1.5rem; width: 100%;">
+        Close Inspection
+      </button>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>
